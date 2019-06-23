@@ -26,4 +26,18 @@ public class Solution {
     }
     return Arrays.copyOf(array, i + 1);
   }
+
+
+  // another solution
+  public int[] dedup(int[] array) {
+    // corner case
+    if(array == null || array.length == 0) return array;
+    int s = 1;
+    int f = 1;
+    while(f < array.length){
+      if(array[f] != array[s-1]) array[s++] = array[f]; 
+      f++;
+    }
+    return Arrays.copyOf(array, s);
+  }
 }
