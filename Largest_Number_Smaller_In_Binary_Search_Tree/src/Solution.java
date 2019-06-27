@@ -28,6 +28,7 @@ The sequence [1, 2, 3, #, #, 4] represents the following binary tree:
   2   3
      /
     4
+https://app.laicode.io/app/problem/136
  */
 
 /**
