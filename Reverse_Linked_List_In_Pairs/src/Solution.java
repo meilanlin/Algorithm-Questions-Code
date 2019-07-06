@@ -22,11 +22,13 @@ https://app.laicode.io/app/problem/35
 public class Solution {
   public ListNode reverseInPairs(ListNode head) {
     // base case
-    if(head == null || head.next == null) return head;
+    if(head == null || head.next == null){
+      return head;
+    }
 
     ListNode next = head.next;
-    head.next = reverseInPairs(next.next);
+    head.next = reverseInPairs(head.next.next);
     next.next = head;
-    return next;
+    return next;// now the next node become the head for this subproblem
   }
 }
